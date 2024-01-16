@@ -1,5 +1,6 @@
 #### todolist
 - [X] 初始化项目
+- [ ] 增加 ci 部署脚本，打通 ci 流程
 - [ ] 去除 ant-design 无用的内容
 
 
