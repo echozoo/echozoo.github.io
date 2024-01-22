@@ -24,8 +24,8 @@ jobs:
           node-version: 16
           
       - name: Install or Update PNPM
-        run: npm install -g pnpm@latest
-
+        uses: pnpm/action-setup@v2.4.0
+        
       - name: Install dependencies (安装依赖)
         run: pnpm install
 
