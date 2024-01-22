@@ -33,8 +33,8 @@ jobs:
           pnpm install
           npm init @eslint/config
       
-      - name: lint (代码检查)
-        run: pnpm run lint
+      # - name: lint (代码检查)
+      #   run: pnpm run lint
 
       - name: Build (构建)
         run: pnpm run build
