@@ -22,23 +22,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          
-      - name: Install or Update PNPM
-        uses: pnpm/action-setup@v2.4.0
+
+      - name: Install pnpm (安装 pnpm)
+        uses: pnpm/action-setup@v2
         with:
-          version: next-9
-          standalone: true
-        
+          version: 7.0.0
+
       - name: Install dependencies (安装依赖)
         run: pnpm install
 
       - name: lint (代码检查)
         run: pnpm run lint
-
-      # en: The template does not contain test cases. If you need to use test cases, you can uncomment it
-      # zh: 初始化模板中不包含测试用例，如需使用测试用例，可取消注释
-      # - name: Test (测试)
-      #   run: pnpm run test
 
       - name: Build (构建)
         run: pnpm run build
