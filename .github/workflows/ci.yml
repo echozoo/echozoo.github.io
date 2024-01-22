@@ -22,11 +22,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: Install pnpm (安装 pnpm)
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7.0.0
+          
+      - name: Install or Update PNPM
+        run: npm install -g pnpm@latest
 
       - name: Install dependencies (安装依赖)
         run: pnpm install
