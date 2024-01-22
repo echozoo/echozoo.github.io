@@ -29,8 +29,10 @@ jobs:
           version: 6.0.0
 
       - name: Install dependencies (安装依赖)
-        run: pnpm install
-
+        run: |
+          pnpm install
+          npm init @eslint/config
+      
       - name: lint (代码检查)
         run: pnpm run lint
 
